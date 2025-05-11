@@ -5,6 +5,7 @@
 #include <string.h>
 #include <malloc.h>
 
+// 创建MString对象
 MString *mstring_new(char *str) {
     // 申请内存
     MString *mstr = (MString *) malloc(sizeof(MString));
@@ -34,32 +35,39 @@ MString *mstring_new(char *str) {
     return NULL;
 }
 
+// 销毁MString对象
 void mstring_destroy(MString *mstr) {
     // 释放内存
     free(mstr->str);
     free(mstr);
 }
 
+// 设置MString对象的值
 void mstring_set(MString *mstr, char *str) {
 
 }
 
+// 追加字符串到MString对象末尾
 void mstring_append(MString *mstr, char *str) {
 
 }
 
+// 插入字符串到MString对象中
 void mstring_insert(MString *mstr, char *str, int pos) {
 
 }
 
+// 删除MString对象中的字符串
 void mstring_delete(MString *mstr, int pos, int len) {
 
 }
 
+// 获取MString对象中的字符串
 char *mstring_get(MString *mstr) {
     return NULL;
 }
 
+// 获取MString对象中的字符串长度
 int mstring_length(MString *mstr) {
     return 0;
 }
